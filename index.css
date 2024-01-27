@@ -1,0 +1,742 @@
+@font-face {
+    font-family: 'robo';
+    src: url('./Roboto-Black.ttf');
+
+}
+
+@font-face {
+    font-family: 'thin';
+    src: url('./Roboto-Thin.ttf');
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: white;
+    text-decoration: none;
+    font-family: 'robo';
+    /* background-color: black; */
+    overflow-x: hidden;
+    background: linear-gradient(to right, #000000, #282828);
+
+
+}
+.color-glow{
+    font-family: 'thin';
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px white;
+}
+
+*::selection {
+    color: rgb(255, 255, 255);
+    background-color: rgb(75, 75, 75);
+}
+
+
+h1 span {
+    text-shadow: 0 0 7px white;
+    font-family: 'thin';
+}
+
+h1 {
+    font-size: 2rem;
+
+}
+
+h2 {
+    font-size: 2rem;
+
+}
+
+body {
+    animation: fadeup .5s linear 1;
+
+}
+
+
+
+
+@keyframes fadeup {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        /* margin: 20px; */
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}
+
+
+@keyframes colorGlow {
+    0% {
+        text-shadow: 0 0 10px gray;
+    }
+
+    25% {
+        text-shadow: 0 0 20px red;
+    }
+
+    50% {
+        text-shadow: 0 0 20px blue;
+    }
+
+    75% {
+        text-shadow: 0 0 10px green;
+    }
+
+    100% {
+        text-shadow: 0 0 10px gray;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+        border-right: 2px solid white;
+
+    }
+
+    to {
+        width: 100%;
+        border-right: 2px solid #282828;
+
+    }
+}
+
+
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+}
+
+p {
+    font-size: clamp(1rem .3rem 1.5rem);
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-shrink: 0;
+
+}
+
+.image>.continer>h1 {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #000;
+    /* You can adjust the border style as needed */
+    font-size: 1.5em;
+    animation: typing 3s steps(20) 1;
+}
+
+@media (max-width: 600px) {
+    .image>.continer>h1 {
+        font-size: 1.2em;
+        /* Adjust the font size for smaller screens */
+    }
+}
+
+
+
+head,
+nav,
+nav>ul {
+    display: flex;
+    animation: fadeup .5s linear 1;
+
+}
+
+nav>ul>li {
+    position: relative;
+    text-decoration: none;
+    margin: 1rem;
+    list-style-type: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-family: "thin";
+    color: white;
+
+}
+
+nav>ul>li::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 15px;
+    left: 0;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 10px black;
+}
+
+nav>ul>li:hover::before {
+    width: 100%;
+
+
+}
+
+@media (max-width: 600px) {
+    nav>ul>li {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
+
+}
+
+@media (max-width: 316px) {
+    nav>ul {
+        flex-direction: column;
+    }
+
+}
+
+
+/*  */
+
+.animate-me {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*  */
+
+.image {
+    display: flex;
+}
+
+.CoolPhoto {
+    margin-top: 7rem;
+    width: 90%;
+    max-height: 80%;
+    filter: drop-shadow(30px 10px 10px black) opacity(0.5);
+}
+
+@media (max-width: 600px) {
+    .CoolPhoto {
+        width: 100%;
+        max-height: auto;
+    }
+}
+
+
+nav>ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.Logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    padding: 1rem;
+    transition: all .5s;
+
+
+}
+
+.Logo:hover {
+    filter: drop-shadow(0 0 10px white);
+}
+
+.continer {
+    font-size: 1.5rem;
+    padding: 5rem;
+    margin-top: 8rem;
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
+    /* animation: fadeup .5s linear 1; */
+
+}
+
+@media (max-width: 600px) {
+    .continer {
+        font-size: 1rem;
+        /* Adjust the font size for smaller screens */
+        padding: 2rem;
+        /* Adjust the padding for smaller screens */
+        margin-top: 4rem;
+        /* Adjust the margin-top for smaller screens */
+    }
+
+    .portfolio>.Tindog>.explain>p {
+        font-size: .5rem;
+    }
+}
+
+.portfolio > h3 span {
+    color: black;
+    text-shadow: 0 0 10px white;
+    font-size: 2rem;
+
+}
+.portfolio > h3{
+    text-shadow: 0 0 10px red;
+    font-size: 2rem;
+
+}
+
+.para {
+    font-family: 'thin';
+}
+
+#About {
+    margin: 5rem;
+}
+#About > h4{
+    text-align: center;
+    margin: 1rem;
+}
+
+#About>h4,
+p {
+    font-family: 'thin';
+    /* text-align: center; */
+}
+
+#About>h3 {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+
+}
+@media (max-width: 768px) {
+    #About {
+        margin: 2rem;
+    }
+
+    #About > h3 {
+        font-size: 1.5rem;
+    }
+}
+
+.skills {
+    width: fit-content;
+    margin: 1rem;
+
+}
+
+.skills>h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: 'thin';
+    text-shadow: 0 0 10px gray;
+    font-weight: bolder;
+
+
+}
+
+.layout {
+    display: flex;
+}
+
+.skills>.layout>ul:hover {
+    box-shadow: 0 0 10px black;
+    box-sizing: border-box;
+    transition: all .5s;
+    transform: scale(1.03);
+
+}
+
+.skills>.layout>ul>li {
+    font-family: 'thin';
+    font-weight: bolder;
+    margin: 1.5rem;
+
+}
+
+.skills>.layout>ul>li:nth-child(1) {
+    color: red;
+    list-style: none;
+    font-size: 1.5rem;
+    margin: 1.5rem;
+}
+
+.SkillSet_img {
+    display: flex;
+    /* Assuming you want a flex container */
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 21rem;
+    opacity: 0.5;
+    filter: drop-shadow(0 0 10px gray) contrast(1.5);
+    /* Combine multiple filter functions */
+}
+
+@media (max-width: 600px) {
+    .skills {
+        width: 100%;
+        margin: 0.5rem;
+    }
+
+    .SkillSet_img {
+        width: 100%;
+        height: auto;
+    }
+
+    .layout {
+        flex-direction: column;
+    }
+
+    /* Add more responsive adjustments as needed */
+}
+
+/*  */
+.portfolio {
+    margin-top: 5rem;
+}
+
+.portfolio>h3 {
+    text-align: center;
+
+}
+
+.Tindog>.explain>h4 {
+    text-align: left;
+    margin: 1rem;
+}
+
+.Tindog,
+.calculator {
+    display: flex;
+    margin: 2rem;
+}
+
+.dogimg {
+    filter: drop-shadow(30px 10px 10px black);
+    transition: 2s;
+}
+
+@media (max-width: 600px) {
+
+
+    .dogimg,
+    .calc {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Add more responsive adjustments as needed */
+}
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    transition: .4s;
+    box-shadow: 0 0 10px rgba(0.0, 0.0, 0.0, 0.3);
+    transition: 1s;
+    color: rgb(85, 85, 85);
+}
+
+.btn:hover {
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgb(86, 86, 86);
+}
+
+.Tindog>.explain>p {
+    width: 90%;
+    margin: 1rem;
+}
+
+@media (max-width: 600px) {
+
+
+    .Tindog>.explain>p {
+        font-size: .5rem;
+    }
+
+
+    /* Add more responsive adjustments as needed */
+}
+
+.calc {
+    size: 5rem;
+    filter: drop-shadow(0 0 20px rgb(113, 113, 113));
+    margin-bottom: 1rem;
+}
+
+.EDUCATION {
+    margin: 5rem;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px black;
+}
+
+/* Media query for screens smaller than 600px */
+@media (max-width: 600px) {
+    .EDUCATION {
+        margin: 2rem;
+        font-size: 1rem;
+    }
+}
+
+/* Media query for screens between 601px and 900px */
+@media (min-width: 601px) and (max-width: 900px) {
+    .EDUCATION {
+        margin: 3rem;
+    }
+}
+
+/* Add more media queries as needed for other screen sizes */
+
+.EDUCATION>h1 {
+    opacity: .9;
+    text-shadow: 0 0 10px gray;
+}
+
+.EDUCATION>.flex>.degree {
+    border-right: 1px solid white;
+    margin: 3rem;
+    font-family: 'thin';
+
+}
+
+.EDUCATION>.flex {
+    display: flex;
+}
+
+.EDUCATION>.flex>.year {
+    margin-top: 3rem;
+    font-family: 'thin';
+    margin-left: -1rem;
+
+}
+
+.EDUCATION>.flex>.degree>h3 {
+    margin: 1rem;
+}
+
+/* contact */
+.contactform {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'thin';
+
+}
+
+/* icon */
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social>div>a>img {
+    margin: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 5rem;
+    transition: .5s;
+
+}
+
+.social>div>a>img:hover {
+    filter: drop-shadow(0 0 12px rgb(80, 80, 80));
+
+}
+
+/* end social */
+
+/* footer */
+.footer {
+    background-color: black;
+    color: white;
+    padding: 5rem;
+
+}
+
+.footer>.contents>.bar>ul>li>a:hover {
+    color: red;
+}
+
+.footer>.contents>.copyright {
+    justify-content: left;
+    margin-right: 11rem;
+}
+
+.footer>.contents {
+    display: flex;
+
+}
+
+.footer>.contents>.bar>ul>li {
+    font-family: "thin";
+    list-style-type: none;
+    margin-top: 1.5rem;
+
+}
+
+.footer>.contents>.contacts {
+    margin: 2rem;
+}
+
+/* icon */
+.social-icon> a> img {
+    width: 36px;
+    height: auto;
+    margin: 1rem;
+    display: flex;
+    border-radius: 50%;
+    transition: .5s;
+    border: 1px solid white;
+    filter: drop-shadow(0 0 10px rgb(48, 47, 47));
+
+
+}
+
+.social-icon> a > img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 10px white);
+
+}
+.phone{
+    font-weight: bolder;
+    margin: 1rem;
+}
+
+.social-icon {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 2rem;
+    }
+
+    .footer>.contents {
+        flex-direction: column;
+    }
+
+    .footer>.contents>.bar {
+        margin-bottom: 2rem;
+    }
+
+    .footer>.contents>.copyright {
+        margin-right: 0;
+    }
+
+    .footer>.contents>.contacts {
+        margin: 1rem;
+    }
+}
+
+/* finial responsive code */
+/* Original styles remain unchanged */
+
+@media (max-width: 768px) {
+    #About {
+        margin: 2rem;
+    }
+
+    #About > h3 {
+        font-size: 1.5rem;
+    }
+
+    .skills {
+        width: 100%;
+        margin: 0.5rem;
+    }
+
+    .SkillSet_img {
+        width: 100%;
+        height: auto;
+    }
+
+    .layout {
+        flex-direction: column;
+    }
+
+    .dogimg,
+    .calc {
+        width: 100%;
+        height: auto;
+    }
+
+    nav>ul>li {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
+
+    .continer {
+        font-size: 1rem;
+        padding: 2rem;
+        margin-top: 4rem;
+    }
+
+    .portfolio>.Tindog>.explain>p {
+        font-size: 0.5rem;
+    }
+
+    .Tindog>.explain>p {
+        font-size: 0.5rem;
+    }
+
+    .btn {
+        font-size: 1.5rem;
+    }
+
+    .EDUCATION {
+        margin: 2rem;
+        font-size: 1rem;
+    }
+
+    .footer {
+        padding: 2rem;
+    }
+
+    .footer > .contents > .bar {
+        margin-bottom: 2rem;
+    }
+
+    .footer > .contents > .copyright {
+        margin-right: 0;
+    }
+
+    .footer > .contents > .contacts {
+        margin: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .image > .continer > h1 {
+        font-size: 1.2em;
+    }
+
+    .nav > ul {
+        flex-direction: column;
+    }
+}
