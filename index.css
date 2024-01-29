@@ -23,7 +23,11 @@ html {
 
 
 }
-.color-glow{
+nav{
+    background-color: red;
+}
+
+.color-glow {
     font-family: 'thin';
     font-weight: bolder;
     text-shadow: 1px 1px 2px white;
@@ -132,8 +136,7 @@ p {
     overflow: hidden;
     white-space: nowrap;
     border-right: 2px solid #000;
-    /* You can adjust the border style as needed */
-    font-size: 1.5em;
+    font-size: 2em;
     animation: typing 3s steps(20) 1;
 }
 
@@ -153,6 +156,7 @@ nav>ul {
     animation: fadeup .5s linear 1;
 
 }
+
 
 nav>ul>li {
     position: relative;
@@ -180,6 +184,7 @@ nav>ul>li::before {
 
 nav>ul>li:hover::before {
     width: 100%;
+    border-bottom: 2px solid crimson;
 
 
 }
@@ -236,7 +241,7 @@ nav>ul>li:hover::before {
 
 nav>ul {
     position: absolute;
-    right: 0;
+    right: 5rem;
     top: 0;
 }
 
@@ -284,13 +289,14 @@ nav>ul {
     }
 }
 
-.portfolio > h3 span {
+.portfolio>h3 span {
     color: black;
     text-shadow: 0 0 10px white;
     font-size: 2rem;
 
 }
-.portfolio > h3{
+
+.portfolio>h3 {
     text-shadow: 0 0 10px red;
     font-size: 2rem;
 
@@ -303,7 +309,8 @@ nav>ul {
 #About {
     margin: 5rem;
 }
-#About > h4{
+
+#About>h4 {
     text-align: center;
     margin: 1rem;
 }
@@ -323,12 +330,13 @@ p {
 
 
 }
+
 @media (max-width: 768px) {
     #About {
         margin: 2rem;
     }
 
-    #About > h3 {
+    #About>h3 {
         font-size: 1.5rem;
     }
 }
@@ -419,8 +427,9 @@ p {
 }
 
 .Tindog>.explain>h4 {
-    text-align: left;
+    text-align: center;
     margin: 1rem;
+    color: crimson;
 }
 
 .Tindog,
@@ -443,7 +452,6 @@ p {
         height: auto;
     }
 
-    /* Add more responsive adjustments as needed */
 }
 
 
@@ -452,15 +460,16 @@ p {
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    transition: .4s;
+    transition: 1.2s;
     box-shadow: 0 0 10px rgba(0.0, 0.0, 0.0, 0.3);
-    transition: 1s;
     color: rgb(85, 85, 85);
 }
 
 .btn:hover {
     box-sizing: border-box;
-    box-shadow: 0 0 10px rgb(86, 86, 86);
+    box-shadow: 0 0 10px rgb(255, 0, 0);
+    transform: scale(1.02);
+    color: crimson;
 }
 
 .Tindog>.explain>p {
@@ -586,6 +595,7 @@ p {
 .footer>.contents>.copyright {
     justify-content: left;
     margin-right: 11rem;
+    margin-top: 10rem ;
 }
 
 .footer>.contents {
@@ -605,25 +615,26 @@ p {
 }
 
 /* icon */
-.social-icon> a> img {
+.social-icon>a>img {
     width: 36px;
     height: auto;
     margin: 1rem;
     display: flex;
     border-radius: 50%;
-    transition: .5s;
+    transition: 1.5s;
     border: 1px solid white;
     filter: drop-shadow(0 0 10px rgb(48, 47, 47));
 
 
 }
 
-.social-icon> a > img:hover {
+.social-icon>a>img:hover {
     transform: scale(1.2);
     filter: drop-shadow(0 0 10px white);
 
 }
-.phone{
+
+.phone {
     font-weight: bolder;
     margin: 1rem;
 }
@@ -662,7 +673,7 @@ p {
         margin: 2rem;
     }
 
-    #About > h3 {
+    #About>h3 {
         font-size: 1.5rem;
     }
 
@@ -718,25 +729,25 @@ p {
         padding: 2rem;
     }
 
-    .footer > .contents > .bar {
+    .footer>.contents>.bar {
         margin-bottom: 2rem;
     }
 
-    .footer > .contents > .copyright {
+    .footer>.contents>.copyright {
         margin-right: 0;
     }
 
-    .footer > .contents > .contacts {
+    .footer>.contents>.contacts {
         margin: 1rem;
     }
 }
 
 @media (max-width: 600px) {
-    .image > .continer > h1 {
+    .image>.continer>h1 {
         font-size: 1.2em;
     }
 
-    .nav > ul {
+    .nav>ul {
         flex-direction: column;
     }
 }
