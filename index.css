@@ -167,6 +167,7 @@ nav>ul>li {
     font-size: 1.5rem;
     font-family: "thin";
     color: white;
+    z-index: 1;
 
 }
 
