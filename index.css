@@ -9,10 +9,19 @@
     src: url('./Roboto-Thin.ttf');
 }
 
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+.points{
+    list-style-type:armenian;
+    font-family: "thin";
+    font-weight: bold;
+}
+.points > li{
+    padding: 1rem;
 }
 
 body,
