@@ -9,6 +9,12 @@
     src: url('./Roboto-Thin.ttf');
 }
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body,
 html {
     margin: 0;
@@ -20,17 +26,34 @@ html {
     /* background-color: black; */
     overflow-x: hidden;
     background: linear-gradient(to right, #000000, #282828);
+    scroll-behavior: smooth;
 
 
 }
-nav{
-    background-color: red;
+.dropdown-toggle{
+    display: none;
+}
+
+
+nav {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgba(0,0,0,0.5); */
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+
 }
 
 .color-glow {
     font-family: 'thin';
     font-weight: bolder;
     text-shadow: 1px 1px 2px white;
+
 }
 
 *::selection {
@@ -40,12 +63,11 @@ nav{
 
 
 h1 span {
-    text-shadow: 0 0 7px white;
-    font-family: 'thin';
+    text-shadow: 0 0 4px white;
 }
 
-h1 {
-    font-size: 2rem;
+.continer>h1 {
+    font-size: 50rem;
 
 }
 
@@ -57,6 +79,9 @@ h2 {
 body {
     animation: fadeup .5s linear 1;
 
+}
+nav button{
+    display: none;
 }
 
 
@@ -78,28 +103,6 @@ body {
     }
 }
 
-
-@keyframes colorGlow {
-    0% {
-        text-shadow: 0 0 10px gray;
-    }
-
-    25% {
-        text-shadow: 0 0 20px red;
-    }
-
-    50% {
-        text-shadow: 0 0 20px blue;
-    }
-
-    75% {
-        text-shadow: 0 0 10px green;
-    }
-
-    100% {
-        text-shadow: 0 0 10px gray;
-    }
-}
 
 @keyframes typing {
     from {
@@ -140,13 +143,6 @@ p {
     animation: typing 3s steps(20) 1;
 }
 
-@media (max-width: 600px) {
-    .image>.continer>h1 {
-        font-size: 1.2em;
-        /* Adjust the font size for smaller screens */
-    }
-}
-
 
 
 head,
@@ -156,6 +152,12 @@ nav>ul {
     animation: fadeup .5s linear 1;
 
 }
+
+nav>ul {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
 
 
 nav>ul>li {
@@ -185,25 +187,17 @@ nav>ul>li::before {
 
 nav>ul>li:hover::before {
     width: 100%;
-    border-bottom: 2px solid crimson;
+    /* border-bottom: 2px solid crimson; */
 
 
 }
 
-@media (max-width: 600px) {
-    nav>ul>li {
-        font-size: 1.2rem;
-        padding: 0.5rem;
-    }
+nav>ul>li>a {
+    transition: all .5s ease;
 
 }
 
-@media (max-width: 316px) {
-    nav>ul {
-        flex-direction: column;
-    }
 
-}
 
 
 /*  */
@@ -232,12 +226,7 @@ nav>ul>li:hover::before {
     filter: drop-shadow(30px 10px 10px black) opacity(0.5);
 }
 
-@media (max-width: 600px) {
-    .CoolPhoto {
-        width: 100%;
-        max-height: auto;
-    }
-}
+
 
 
 nav>ul {
@@ -275,31 +264,18 @@ nav>ul {
 
 }
 
-@media (max-width: 600px) {
-    .continer {
-        font-size: 1rem;
-        /* Adjust the font size for smaller screens */
-        padding: 2rem;
-        /* Adjust the padding for smaller screens */
-        margin-top: 4rem;
-        /* Adjust the margin-top for smaller screens */
-    }
 
-    .portfolio>.Tindog>.explain>p {
-        font-size: .5rem;
-    }
-}
 
 .portfolio>h3 span {
-    color: black;
-    text-shadow: 0 0 10px white;
-    font-size: 2rem;
+    color: crimson;
+    text-shadow: 0 0 10px crimson;
+    font-size: 3rem;
 
 }
 
 .portfolio>h3 {
     text-shadow: 0 0 10px red;
-    font-size: 2rem;
+    font-size: 3rem;
 
 }
 
@@ -311,15 +287,34 @@ nav>ul {
     margin: 5rem;
 }
 
+#About>h3 {
+    color: rgb(255, 255, 255);
+
+}
+
+#About>h3 span {
+    color: crimson;
+}
+
 #About>h4 {
     text-align: center;
     margin: 1rem;
+    color: crimson;
+    font-weight: bolder;
 }
 
 #About>h4,
-p {
+#About>p {
     font-family: 'thin';
-    /* text-align: center; */
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1.5rem;
+    font-family: 'thin';
+
+
 }
 
 #About>h3 {
@@ -332,15 +327,6 @@ p {
 
 }
 
-@media (max-width: 768px) {
-    #About {
-        margin: 2rem;
-    }
-
-    #About>h3 {
-        font-size: 1.5rem;
-    }
-}
 
 .skills {
     width: fit-content;
@@ -389,33 +375,15 @@ p {
 
 .SkillSet_img {
     display: flex;
-    /* Assuming you want a flex container */
     justify-content: center;
     align-items: center;
     width: 20rem;
     height: 21rem;
     opacity: 0.5;
     filter: drop-shadow(0 0 10px gray) contrast(1.5);
-    /* Combine multiple filter functions */
 }
 
-@media (max-width: 600px) {
-    .skills {
-        width: 100%;
-        margin: 0.5rem;
-    }
 
-    .SkillSet_img {
-        width: 100%;
-        height: auto;
-    }
-
-    .layout {
-        flex-direction: column;
-    }
-
-    /* Add more responsive adjustments as needed */
-}
 
 /*  */
 .portfolio {
@@ -427,7 +395,8 @@ p {
 
 }
 
-.Tindog>.explain>h4 {
+.Tindog>.explain>h4,
+.calculator>.explain>h4 {
     text-align: center;
     margin: 1rem;
     color: crimson;
@@ -439,21 +408,13 @@ p {
     margin: 2rem;
 }
 
+
 .dogimg {
     filter: drop-shadow(30px 10px 10px black);
     transition: 2s;
 }
 
-@media (max-width: 600px) {
 
-
-    .dogimg,
-    .calc {
-        width: 100%;
-        height: auto;
-    }
-
-}
 
 
 .btn {
@@ -478,16 +439,7 @@ p {
     margin: 1rem;
 }
 
-@media (max-width: 600px) {
 
-
-    .Tindog>.explain>p {
-        font-size: .5rem;
-    }
-
-
-    /* Add more responsive adjustments as needed */
-}
 
 .calc {
     size: 5rem;
@@ -498,36 +450,30 @@ p {
 .EDUCATION {
     margin: 5rem;
     text-align: center;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 5px black;
+
 }
 
 /* Media query for screens smaller than 600px */
-@media (max-width: 600px) {
-    .EDUCATION {
-        margin: 2rem;
-        font-size: 1rem;
-    }
-}
 
-/* Media query for screens between 601px and 900px */
-@media (min-width: 601px) and (max-width: 900px) {
-    .EDUCATION {
-        margin: 3rem;
-    }
-}
 
-/* Add more media queries as needed for other screen sizes */
+
 
 .EDUCATION>h1 {
     opacity: .9;
     text-shadow: 0 0 10px gray;
+    font-size: 1.5rem;
+
 }
 
 .EDUCATION>.flex>.degree {
     border-right: 1px solid white;
     margin: 3rem;
     font-family: 'thin';
+
 
 }
 
@@ -536,14 +482,22 @@ p {
 }
 
 .EDUCATION>.flex>.year {
-    margin-top: 3rem;
+    margin-top: 4rem;
     font-family: 'thin';
     margin-left: -1rem;
+
+
+}
+
+.year>h3 {
+    font-size: 1rem;
 
 }
 
 .EDUCATION>.flex>.degree>h3 {
     margin: 1rem;
+    font-size: 1rem;
+
 }
 
 /* contact */
@@ -580,23 +534,43 @@ p {
 }
 
 /* end social */
+/*  */
 
 /* footer */
 .footer {
     background-color: black;
     color: white;
-    padding: 5rem;
+    padding: 4rem;
+    transition: 1s;
 
 }
 
 .footer>.contents>.bar>ul>li>a:hover {
     color: red;
+    transform: scale(1.1);
+    transition: .5s;
+
+}
+
+.bar>ul>li:hover {
+    transform: scale(1.1);
+
+}
+
+.bar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    margin-top: 5rem;
+    transition: 1s;
 }
 
 .footer>.contents>.copyright {
     justify-content: left;
     margin-right: 11rem;
-    margin-top: 10rem ;
+    margin-top: 10rem;
 }
 
 .footer>.contents {
@@ -608,12 +582,16 @@ p {
     font-family: "thin";
     list-style-type: none;
     margin-top: 1.5rem;
+    transition: 1.5s;
+
 
 }
 
 .footer>.contents>.contacts {
     margin: 2rem;
+    margin-top: 6rem;
 }
+
 
 /* icon */
 .social-icon>a>img {
@@ -625,6 +603,8 @@ p {
     transition: 1.5s;
     border: 1px solid white;
     filter: drop-shadow(0 0 10px rgb(48, 47, 47));
+    margin-top: 2rem;
+    margin-left: 2rem;
 
 
 }
@@ -638,12 +618,207 @@ p {
 .phone {
     font-weight: bolder;
     margin: 1rem;
+
+}
+
+.phone>a {
+    transition: all 1s;
+
+}
+
+.phone>a:hover {
+    transform: scale(1.1);
+    color: rgb(254, 121, 121);
+
 }
 
 .social-icon {
     display: flex;
 }
+/* menu icon code */
 
+ 
+
+
+
+/* start 1186 screen */
+@media (max-width: 1186px) {
+    /* ---head section--- */
+    .Logo {
+        display: none;
+    }
+    nav > ul > li:nth-child(-n+3){
+        display: none;
+    }
+    .dropdown-toggle{
+        display: block;
+        font-size: 2rem;
+    }
+
+    .continer {
+        font-size: 2rem;
+        padding: 2rem;
+        margin-top: 4rem;
+    }
+
+    .continer>h2,
+    p {
+        font-size: 4rem;
+
+    }
+    .image {
+        flex-direction: column;
+    }
+
+    .CoolPhoto {
+        width: 90%;
+        max-height: auto;
+    }
+
+
+    /* ---TinDog--- */
+    .Tindog {
+        flex-direction: column;
+
+    }
+
+    .Tindog>.explain>p {
+        font-size: 2rem;
+
+    }
+
+    /* ---Calculator */
+    .calculator {
+        flex-direction: column;
+
+    }
+
+    .calculator>.explain>p {
+        font-size: 2rem;
+
+    }
+
+
+    /* ---About--- */
+    #About {
+        margin: 3rem;
+    }
+
+    #About>h3 {
+        font-size: 3.5rem;
+    }
+
+    #About>h4 {
+        font-size: 2.5rem;
+    }
+
+    #About>p {
+        font-size: 2rem;
+    }
+
+    /* ---Skills--- */
+    .skills {
+        width: 100%;
+        margin: 1.5rem;
+        font-size: 2rem;
+    }
+
+    .skills>h3 {
+        font-size: 4rem;
+    }
+
+    .SkillSet_img {
+        width: 100%;
+        height: auto;
+    }
+
+
+
+    .layout>ul>li {
+        list-style-type: none;
+
+    }
+
+    .dogimg,
+    .calc {
+        width: 100%;
+        height: auto;
+    }
+
+    .explain>h4 {
+        font-size: 3rem;
+    }
+
+
+    /* ---eduction--- */
+    .EDUCATION {
+        margin: 2rem;
+        font-size: 1rem;
+    }
+
+    /* ---nav--- */
+    nav {
+        height: 10%;
+    }
+
+    nav>ul>li>a {
+        font-size: 2.8rem;
+
+    }
+
+
+}
+/* end 1186px screen */
+
+/* 1024px start */
+@media (max-width: 1025px) {
+    
+
+    nav{
+        height: 20%;
+
+    }
+    .layout{
+        flex-direction: column;
+    }
+    .btn{
+        padding: 1rem 1rem ;
+    }
+    .copyright> p{
+        font-size: 1.5rem;
+    }
+    .bar{
+        font-size: 2rem;
+    }
+    .contacts > p, .contacts{
+        font-size: 1rem;
+        margin-top: 2rem;
+    }
+   
+}
+
+/*  */
+@media (max-width: 600px) {
+    .image>.continer>h1 {
+        font-size: 1.2em;
+    }
+}
+
+/*  */
+
+@media (max-width: 600px) {
+    nav>ul>li {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+        flex-direction: column;
+        /* nav button here */
+    }
+
+}
+
+/*  */
+
+/* ---footer--- */
 @media (max-width: 768px) {
     .footer {
         padding: 2rem;
@@ -666,65 +841,9 @@ p {
     }
 }
 
-/* finial responsive code */
-/* Original styles remain unchanged */
+/*  */
 
 @media (max-width: 768px) {
-    #About {
-        margin: 2rem;
-    }
-
-    #About>h3 {
-        font-size: 1.5rem;
-    }
-
-    .skills {
-        width: 100%;
-        margin: 0.5rem;
-    }
-
-    .SkillSet_img {
-        width: 100%;
-        height: auto;
-    }
-
-    .layout {
-        flex-direction: column;
-    }
-
-    .dogimg,
-    .calc {
-        width: 100%;
-        height: auto;
-    }
-
-    nav>ul>li {
-        font-size: 1.2rem;
-        padding: 0.5rem;
-    }
-
-    .continer {
-        font-size: 1rem;
-        padding: 2rem;
-        margin-top: 4rem;
-    }
-
-    .portfolio>.Tindog>.explain>p {
-        font-size: 0.5rem;
-    }
-
-    .Tindog>.explain>p {
-        font-size: 0.5rem;
-    }
-
-    .btn {
-        font-size: 1.5rem;
-    }
-
-    .EDUCATION {
-        margin: 2rem;
-        font-size: 1rem;
-    }
 
     .footer {
         padding: 2rem;
@@ -742,13 +861,36 @@ p {
         margin: 1rem;
     }
 }
-
-@media (max-width: 600px) {
-    .image>.continer>h1 {
-        font-size: 1.2em;
+/*  */
+@media (max-width: 670px) {
+    
+    .continer > *{
+        font-size: 1.5rem;
     }
+    
+}
+@media (max-width: 821px) {
+    .bar{
+        align-items: center;
+    }
+    .contacts > p{
+        align-items: center;
+        font-size: 1rem;
 
-    .nav>ul {
-        flex-direction: column;
+
+    }
+   
+    
+    
+}
+/* end 821px */
+
+@media (max-width:376px){
+    .continer>h2{
+        font-size: 2rem;
+    }
+    .explain>p{
+        display: block;
     }
 }
+

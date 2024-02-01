@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./index.css">
+
 </head>
 
 <body>
@@ -15,18 +16,33 @@
     <!--  -->
 
     <head>
-        <nav>
+
+       
+        <nav id="navbar">
+            
 
             <a href="./index.html"><img src="./F-removebg-preview.png" alt="Logo" class="Logo F"></a>
+
+            
             <ul>
                 <li><a href="#About">About</a></li>
                 <li><a href="./ilovepdf_merged.pdf" onclick="confirmDownload()">Archives</a></li>
                 <li><a href="#">Resume</a></li>
+                <li><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    &#9776;
 
-
-
+                  </a>
+                  <ul class="dropdown-menu menu">
+                    <li><a href="#About" class="dropdown-item">About</a></li>
+                    <li><a href="./ilovepdf_merged.pdf" onclick="confirmDownload()" class="dropdown-item">Archives</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Resume</a></li>
+                  </ul>
+                </li>
+                
             </ul>
         </nav>
+
 
     </head>
     <!--  -->
@@ -72,7 +88,7 @@
                 <li>Canva</li>
                 <li>Figma</li>
                 <li>Adobe PhotoShop</li>
-                
+
 
             </ul>
             <img class="SkillSet_img" src="./skills.png" alt="skills set">
@@ -110,13 +126,7 @@
         <!-- tindog-end -->
         <div class="calculator">
             <!-- calculator start -->
-            <div>
-                <!-- images. -->
-                <img class="calc"
-                    src="./pixlr-image-generator-194d2b59-7608-4003-9a89-4aca46f28d4b-removebg-preview.png"
-                    alt="calculator image">
 
-            </div>
             <!--  -->
             <div class="explain">
                 <!-- text and perview link  -->
@@ -131,30 +141,18 @@
 
 
             </div>
+            <div>
+                <!-- images. -->
+                <img class="calc"
+                    src="./pixlr-image-generator-194d2b59-7608-4003-9a89-4aca46f28d4b-removebg-preview.png"
+                    alt="calculator image">
+
+            </div>
 
         </div>
         <!-- end-calculator -->
 
-        <section class="EDUCATION">
-            <!-- EDUCATION -->
-            <br>
-            <h1>EDUCATION</h1>
 
-            <div class="flex">
-                <div class="degree">
-
-                    <!-- About the degree -->
-                    <h3>Bachelor of Science in Information Technology at University of Madras</h3>
-
-                </div>
-                <div class="year">
-                    <!-- year of studys -->
-                    <h3>jun 2023 - Nov 2026</h3>
-
-                </div>
-            </div>
-
-        </section>
 
         <!--  -->
     </section>
@@ -162,7 +160,7 @@
     <section id="About">
         <!-- about me -->
         <h3><span>A</span>bout Me</h3>
-        <h4>I am a Professional  Web developer.</h4>
+        <h4>I am a Professional Web developer.</h4>
 
         <p>
             Greetings, I am Mohamed Fazil, a dedicated web and app developer with a passion for creating futuristic and
@@ -173,14 +171,35 @@
             with technological advancements underscores my goal of seamlessly blending creativity and functionality in
             every project.</p>
     </section>
+    <!--  -->
+    <section class="EDUCATION">
+        <!-- EDUCATION -->
+        <br>
+        <h1>EDUCATION</h1>
+
+        <div class="flex">
+            <div class="degree">
+
+                <!-- About the degree -->
+                <h3>Bachelor of Science in Information Technology at University of Madras</h3>
+
+            </div>
+            <div class="year">
+                <!-- year of studys -->
+                <h3>jun 2023 - Nov 2026</h3>
+
+            </div>
+        </div>
+
+    </section>
 
     <!-- footer  -->
     <div class="footer">
         <div class="contents">
             <div class="copyright">
                 <!-- copyright -->
-                <p>&copy; 2024 Your Company Name. All rights reserved. |  <a href="terms.html">Terms of Service</a> | <a
-                        href="privacy.html">Privacy Policy</a></p>
+                <p>&copy; 2024 Mohamed Fazil N. All rights reserved. | <a href="#">Terms of Service</a> | <a
+                        href="#">Privacy Policy</a></p>
             </div>
             <div class="bar">
                 <ul>
@@ -193,14 +212,13 @@
             </div>
             <div class="contacts">
                 <!-- contacts -->
-                <p>@nmohammedfazil790@gmail.com</p>
-                <p class="phone"> Contact : <a href="tel:+919176463562"> +91 9176463562</a></p>
+                <p class="mail">@nmohammedfazil790@gmail.com</p>
+                <p class="phone"><a href="tel:+919176463562"> +91 9176463562</a></p>
                 <ul class="social-icon">
 
                     <a href="https://www.linkedin.com/in/mohamed-fazil-76013827b/"><img
                             src="./linkedin-removebg-preview.png" alt="" id="linkedin"></a>
                     <a href="https://github.com/MohamedFazil89"><img src="./github.png" alt=""></a>
-                    <a href="https://www.instagram.com/coder_boy.hacker/"><img src="./instagram.png" alt=""></a>
                 </ul>
 
             </div>
