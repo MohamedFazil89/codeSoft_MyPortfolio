@@ -620,7 +620,7 @@ p {
 
 .social-icon>a>img:hover {
     transform: scale(1.2);
-    filter: drop-shadow(0 0 10px white);
+    filter: drop-shadow(0 0 10px rgb(0, 94, 255));
 
 }
 
