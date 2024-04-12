@@ -551,6 +551,7 @@ p {
     color: white;
     padding: 4rem;
     transition: 1s;
+    box-shadow: 0 0 10px white;
 
 }
 
